@@ -14,7 +14,7 @@ export class AuthJwtService {
 
       return decoded;
     } catch (error) {
-      throw new UnauthorizedException('Invalid or expired token');
+      throw new UnauthorizedException('User Authentication Failed');
     }
   }
 }
