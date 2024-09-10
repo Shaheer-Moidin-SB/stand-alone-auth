@@ -18,7 +18,7 @@ export class AuthController {
       return isValid;
     } catch (oError) {
       console.error('Error while authorizing user:', oError);
-      throw new RpcException('Error while creating order ' + oError);
+      throw new RpcException(oError);
     }
   }
 }

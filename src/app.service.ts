@@ -20,11 +20,11 @@ export class AuthService {
       const decodedToken = await this.authJwtService.validateToken(token);
 
       if (!decodedToken) {
-        throw 'Invalid Token Provided';
+        throw 'User Authentication Failed';
       }
       return true;
     } catch (e) {
-      throw 'Invalid Token Provided';
+      throw 'User Authentication Failed';
     }
   }
 }
