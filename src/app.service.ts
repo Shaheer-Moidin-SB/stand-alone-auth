@@ -21,6 +21,7 @@ export class AuthService {
         token,
       );
 
+      //this can check any blacklisted user or expired token
       if (isBlacklisted) {
         await this.redisService.deleteSession(userId);
         await this.redisService.removeFromBlacklist(userId);

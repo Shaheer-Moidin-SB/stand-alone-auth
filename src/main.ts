@@ -15,6 +15,17 @@ async function bootstrap() {
       },
     },
   });
+  app.connectMicroservice({
+    transport: Transport.KAFKA,
+    options: {
+      client: {
+        brokers: ['localhost:9093'],
+      },
+      consumer: {
+        groupId: 'auth-consumer',
+      },
+    },
+  });
   await app.startAllMicroservices();
   await app.listen(3006, () =>
     console.log(
