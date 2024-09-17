@@ -14,7 +14,7 @@ export class AuthController {
   async authorizeUser(data: any) {
     try {
       console.log('Authorization Service pinging....');
-      const isValid = await this.appService.validateUser(data.userId);
+      const isValid = await this.appService.validateUser(data.token);
       return isValid;
     } catch (oError) {
       console.error('Error while authorizing user:', oError);

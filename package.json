@@ -27,6 +27,7 @@
     "@nestjs/passport": "^10.0.3",
     "@nestjs/platform-express": "^10.4.1",
     "bcryptjs": "^2.4.3",
+    "crypto-js": "^4.2.0",
     "ioredis": "^5.4.1",
     "kafka-node": "^5.0.0",
     "kafkajs": "^2.2.4",
